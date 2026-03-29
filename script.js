@@ -2,6 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("imcForm");
     const resultado = document.getElementById("resultado");
     const limparBtn = document.getElementById("limpar");
+    const pesoInput = document.getElementById("peso");
+    const alturaInput = document.getElementById("altura");
 
     const ctx = document.getElementById("grafico").getContext("2d");
 
