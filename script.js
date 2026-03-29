@@ -2,9 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("imcForm");
     const resultado = document.getElementById("resultado");
     const limparBtn = document.getElementById("limpar");
-    const peso = Number(form.peso.value);
-    const altura = Number(form.altura.value);
-
+    const pesoInput = document.getElementById("peso");
+    const alturaInput = document.getElementById("altura");
     const ctx = document.getElementById("grafico").getContext("2d");
 
     let historico = JSON.parse(localStorage.getItem("historicoIMC")) || [];
