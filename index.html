@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +8,29 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div class="container">
+    <main class="container">
         <h1>Calculadora de IMC</h1>
+
         <form id="imcForm">
-            <label for="peso">Peso (kg):</label>
-            <input type="number" id="peso" step="0.1" required>
-            <label for="altura">Altura (m):</label>
-            <input type="number" id="altura" step="0.01" required>
-            <button type="submit">Calcular IMC</button>
+            <div class="field">
+                <label for="peso">Peso (kg)</label>
+                <input type="number" id="peso" step="0.1" min="1" required>
+            </div>
+
+            <div class="field">
+                <label for="altura">Altura (m)</label>
+                <input type="number" id="altura" step="0.01" min="0.5" required>
+            </div>
+
+            <button type="submit">Calcular</button>
+            <button type="button" id="limpar">Limpar Histórico</button>
         </form>
-        <div id="resultado"></div>
+
+        <p id="resultado"></p>
+
         <canvas id="grafico"></canvas>
-    </div>
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
